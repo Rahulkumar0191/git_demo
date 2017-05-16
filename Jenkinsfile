@@ -13,7 +13,7 @@ pipeline {
     }  
       stage ('Build') {
       steps {
-         bat ' echo "build your code here" '
+         bat 'powershell "write-host build your code here" '
       }
     }
     stage('Test') {
