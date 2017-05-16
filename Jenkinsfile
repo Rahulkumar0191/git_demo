@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Main_Repo') {
       steps {
         bat 'echo "Hello"'
       }
@@ -11,6 +11,11 @@ pipeline {
          checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Rahulkumar0191/Test.git']]])
       }
     }  
+      stage ('Build') {
+      steps {
+         bat ' echo "Build your code here" '
+      }
+    }
     stage('Test') {
       steps {
         build 'Test'
