@@ -14,7 +14,7 @@ pipeline {
       stage ('Build') {
       steps {
          input 'Confirm'
-         bat 'powershell "./copy.ps1"'
+         bat 'powershell "Copy-Item -Path D:\Azure\output\* -Destination D:\svn_poc\cop\ -force"'
       }
     }
     stage('Test') {
