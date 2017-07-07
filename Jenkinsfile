@@ -14,7 +14,7 @@ pipeline {
       stage ('Build') {
       steps {
          input 'Confirm'
-         bat 'powershell.exe -file "copy.ps1"'
+         bat 'powershell.exe -NoProfile -ExecutionPolicy Bypass -file "copy.ps1"'
       }
     }
     stage('Test') {
