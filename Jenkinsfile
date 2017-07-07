@@ -13,7 +13,8 @@ pipeline {
     }  
       stage ('Build') {
       steps {
-         bat 'powershell "write-host build your code here" '
+         input 'Confirm'
+         bat 'powershell "copy.ps1"'
       }
     }
     stage('Test') {
