@@ -14,7 +14,7 @@ pipeline {
       stage ('Build') {
       steps {
          input 'Confirm'
-         bat 'powershell copy.ps1'
+         bat 'powershell.exe "copy.ps1"'
       }
     }
     stage('Test') {
