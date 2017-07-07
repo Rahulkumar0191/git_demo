@@ -14,7 +14,7 @@ pipeline {
       stage ('Build') {
       steps {
          input 'Confirm'
-         bat 'powershell.exe -NoProfile -ExecutionPolicy Bypass -file "D:\svn_poc\cop\copy.ps1"'
+         bat 'powershell.exe -NoProfile -ExecutionPolicy Bypass -file "D:\\svn_poc\\cop\\copy.ps1"'
       }
     }
     stage('Test') {
