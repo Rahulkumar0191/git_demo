@@ -14,7 +14,7 @@ pipeline {
       stage ('Build') {
       steps {
          input 'Confirm'
-         bat 'powershell "D:\svn_poc\cop\copy.ps1"'
+         bat 'powershell "copy.ps1"'
       }
     }
     stage('Test') {
