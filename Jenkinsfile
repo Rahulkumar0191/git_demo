@@ -13,7 +13,9 @@ pipeline {
     }  
       stage ('Build') {
       steps {
-         bat 'powershell "write-host build your code here" '
+         input 'Confirm'
+         bat 'powershell "write-host build your code here" 
+              D:\svn_poc\cop\copy.ps1 '
       }
     }
     stage('Test') {
