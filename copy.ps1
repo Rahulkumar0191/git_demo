@@ -1,1 +1,0 @@
-﻿Copy-Item -Path D:\Azure\output\* -Destination D:\svn_poc\cop\ -force
